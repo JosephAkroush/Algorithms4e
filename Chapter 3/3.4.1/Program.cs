@@ -43,12 +43,28 @@ public class LinkedList
 
         while (node.Next != null)
         {
+            // Update if exists.
+            if (node.Key.Equals(key))
+            {
+                node.Data = data;
+
+                return;
+            }
+
             node = node.Next;
         }
 
-        node.Next = new Node();
-        node.Next.Key = key;
-        node.Next.Data = data;
+        // Update tail if key exists. Insert at tail if key doesn't exist.
+        if (node.Key.Equals(key))
+        {
+            node.Data = data;
+        }
+        else
+        {
+            node.Next = new Node();
+            node.Next.Key = key;
+            node.Next.Data = data;
+        }
     }
 
     public string Get(string key)
