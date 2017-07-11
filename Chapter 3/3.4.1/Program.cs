@@ -104,7 +104,7 @@ public class HashTable
         _chains[index].Add(key, data);
     }
 
-    public int GetHashCode(char key)
+    private int GetHashCode(char key)
     {
         return 11 * (key - _asciiDiff) % _capacity;
     }
