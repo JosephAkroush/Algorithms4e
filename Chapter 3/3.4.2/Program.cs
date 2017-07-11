@@ -49,12 +49,12 @@
 
           Node<K, V> node = _nodes[index];
 
-    // Head of linked list is empty
+          // Head of linked list is empty
           // Note: I understand K can be a value type where the null comparison is invalid
-    if (node.Key == null)
-    {
+          if (node.Key == null)
+          {
               return default(V);
-    }
+          }
 
           while (node != null)
           {
@@ -75,9 +75,9 @@
 
           Node<K, V> node = _nodes[index];
 
-    // Head of linked list is empty
-    // Note: I understand K can be a value type where the null comparison is invalid
-    if (node.Key == null)
+          // Head of linked list is empty
+          // Note: I understand K can be a value type where the null comparison is invalid
+          if (node.Key == null)
           {
               node.Key = key;
               node.Data = data;
